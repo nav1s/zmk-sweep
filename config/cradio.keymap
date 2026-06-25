@@ -108,10 +108,10 @@
 
         fnc_layer {
             bindings = <
-&kp F1    &kp F2    &kp F3      &kp F4     &kp F5      &kp F6   &kp F7   &kp F8           &kp F9  &kp F10
-&sk LALT  &sk LGUI  &sk LSHIFT  &sk LCTRL  &kp RALT    &kp F11  &kp F12  &kp PRINTSCREEN  &trans  &trans
-&none     &none     &none       &none      &none       &none    &none    &none            &none   &none
-                                &none      &none       &none    &none
+&kp C_STOP &kp C_PREV   &kp C_PP      &kp C_NEXT   &kp C_BRI_UP      &kp F12 &kp F7 &kp F8 &kp F9 &kp SLCK
+&sk LALT   &sk LGUI     &sk LSHIFT    &sk LCTRL    &kp C_BRI_DN      &kp F11 &kp F4 &kp F5 &kp F6 &to 0
+&kp C_MUTE &kp C_VOL_DN &kp LC(LS(C)) &kp C_VOL_UP &kp LC(LS(V))     &kp F10 &kp F1 &kp F2 &kp F3 &to 1
+                                      &none        &none             &none          &none
             >;
         };
 
