@@ -1,0 +1,219 @@
+layout: {zmk_keyboard: cradio}
+layers:
+  default:
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - A
+  - S
+  - D
+  - F
+  - G
+  - H
+  - J
+  - K
+  - L
+  - ''''
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - N
+  - M
+  - ','
+  - .
+  - /
+  - ext
+  - {t: SPACE, h: LSHIFT}
+  - {t: SPACE, type: held}
+  - {t: sym, h: sticky, type: held}
+  sym:
+  - '!'
+  - '@'
+  - '#'
+  - $
+  - '%'
+  - '='
+  - '`'
+  - ':'
+  - ;
+  - +
+  - {t: LALT, h: sticky}
+  - {t: LGUI, h: sticky}
+  - {t: LSHIFT, h: sticky}
+  - {t: LCTRL, h: sticky}
+  - ^
+  - '*'
+  - (
+  - '{'
+  - '['
+  - '-'
+  - ''
+  - ''
+  - \
+  - '|'
+  - '&'
+  - '~'
+  - )
+  - '}'
+  - ']'
+  - _
+  - fnc
+  - numpad
+  - {t: ▽, type: trans}
+  - {type: held}
+  ext:
+  - ESC
+  - AC BACK
+  - Ctl+F
+  - AC FORWARD
+  - INS
+  - PG UP
+  - HOME
+  - UP
+  - END
+  - CAPS
+  - {t: LALT, h: sticky}
+  - {t: LGUI, h: sticky}
+  - {t: LSHIFT, h: sticky}
+  - {t: LCTRL, h: sticky}
+  - RALT
+  - PG DN
+  - LEFT
+  - DOWN
+  - RIGHT
+  - BSPC
+  - Ctl+Z
+  - Ctl+X
+  - Ctl+C
+  - Ctl+B
+  - Ctl+V
+  - ENTER
+  - DEL
+  - TAB
+  - APP
+  - PRINTSCREEN
+  - {type: held}
+  - LCTRL
+  - ENTER
+  - fnc
+  fnc:
+  - STOP
+  - PREV
+  - PP
+  - NEXT
+  - BRI UP
+  - F12
+  - F7
+  - F8
+  - F9
+  - SLCK
+  - {t: LALT, h: sticky}
+  - {t: LGUI, h: sticky}
+  - {t: LSHIFT, h: sticky}
+  - {t: LCTRL, h: sticky}
+  - BRI DN
+  - F11
+  - F4
+  - F5
+  - F6
+  - {t: default, h: toggle}
+  - MUTE
+  - VOL DN
+  - Ctl+Sft+C
+  - VOL UP
+  - Ctl+Sft+V
+  - F10
+  - F1
+  - F2
+  - F3
+  - {t: sym, h: toggle}
+  - {type: held}
+  - ''
+  - ''
+  - {type: held}
+  numpad:
+  - ''
+  - ''
+  - ''
+  - ''
+  - KP NUM
+  - '='
+  - '7'
+  - '8'
+  - '9'
+  - +
+  - {t: LALT, h: sticky}
+  - {t: LGUI, h: sticky}
+  - {t: LSHIFT, h: sticky}
+  - {t: LCTRL, h: sticky}
+  - RALT
+  - '*'
+  - '4'
+  - '5'
+  - '6'
+  - '-'
+  - ''
+  - APP
+  - TAB
+  - BSPC
+  - ENTER
+  - '0'
+  - '1'
+  - '2'
+  - '3'
+  - /
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {type: held}
+  settings:
+  - BOOT LDR
+  - ''
+  - EP TOG
+  - BT CLR
+  - {t: BT, h: '0'}
+  - {t: BT, h: '3'}
+  - ''
+  - '&unstick'
+  - ''
+  - BOOT LDR
+  - ''
+  - ''
+  - ''
+  - ''
+  - {t: BT, h: '1'}
+  - {t: BT, h: '4'}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {t: BT, h: '2'}
+  - {t: BT, h: '5'}
+  - ''
+  - ''
+  - ''
+  - ''
+  - {type: held}
+  - {type: held}
+  - ''
+  - ''
+combos:
+- p: [32, 33]
+  k: default
+- p: [31, 33]
+  k: numpad
+- p: [30, 31]
+  k: settings
