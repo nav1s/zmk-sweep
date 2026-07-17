@@ -32,8 +32,8 @@ layers:
   - .
   - /
   - ext
-  - {t: SPACE, h: LSHIFT}
-  - {t: SPACE, type: held}
+  - SPACE
+  - {t: SPACE, h: ext, type: held}
   - {t: sym, h: sticky, type: held}
   sym:
   - '!'
@@ -78,7 +78,7 @@ layers:
   - INS
   - PG UP
   - HOME
-  - UP
+  - PG DN
   - END
   - CAPS
   - {t: LALT, h: sticky}
@@ -86,16 +86,16 @@ layers:
   - {t: LSHIFT, h: sticky}
   - {t: LCTRL, h: sticky}
   - RALT
-  - PG DN
   - LEFT
   - DOWN
+  - UP
   - RIGHT
   - BSPC
   - Ctl+Z
   - Ctl+X
   - Ctl+C
-  - Ctl+B
   - Ctl+V
+  - Ctl+B
   - ENTER
   - DEL
   - TAB
