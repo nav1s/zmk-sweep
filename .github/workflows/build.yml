@@ -3,8 +3,8 @@ name: ZMK Firmware
 on:
   push:
   workflow_dispatch:
-  schedule:
-    - cron: "0 0 1 */2 *" # run every two months to keep artifacts from expiring
+  #schedule:
+  #  - cron: "0 0 1 */2 *" # run every two months to keep artifacts from expiring
 
 jobs:
   convert-and-store-keymap:
@@ -19,15 +19,15 @@ jobs:
           python-version: "3.x"
       - run: python scripts/convert_keymap.py -c q2c --in-path "$GITHUB_WORKSPACE/config/cradio.keymap"
 
-      - uses: actions/upload-artifact@v4
-        with:
-          name: keymap_files
-          path: ${{ github.workspace }}/config/*.keymap
+      # - uses: actions/upload-artifact@v4
+      #   with:
+      #     name: keymap_files
+      #     path: ${{ github.workspace }}/config/*.keymap
 
-  build:
-    needs: convert-and-store-keymap
-    uses: ./.github/workflows/user_config_build.yaml
-    # uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+  #build:
+  #  needs: convert-and-store-keymap
+  #  uses: ./.github/workflows/user_config_build.yaml
+  #  # uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
 
   keymap_images:
     needs: build
