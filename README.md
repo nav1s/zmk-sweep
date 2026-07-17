@@ -2,6 +2,6 @@ This layout is inspired by [Seniply by Stevep99](https://stevep99.github.io/seni
 
 <div align="center">
 
-![sweep-layout](keymap-drawer/cradio.svg)
+![sweep-layout](config/cradio.svg)
 
 </div>
