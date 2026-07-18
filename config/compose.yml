@@ -1,0 +1,39 @@
+name: zmk-cradio-build
+
+services:
+  build:
+    image: zmkfirmware/zmk-dev-arm:stable
+    volumes:
+      # Mount your current config folder into the workspace
+      - .:/workspace/config
+      # Use Docker volumes to cache the ZMK repository and build files
+      # so subsequent builds are much faster and don't pollute your git repo
+      - zmk-cache:/workspace/zmk
+      - west-cache:/workspace/.west
+      - build-cache:/workspace/build
+    working_dir: /workspace
+    command: >
+      /bin/bash -c "
+        echo 'Initializing West workspace...'
+        if [ ! -d .west ]; then west init -l config; fi
+        west update
+        west export
+
+        echo 'Building Left Half...'
+        west build -s zmk/app -d build/left -b nice_nano_@2.0 -- -DSHIELD=cradio_left -DZMK_CONFIG=/workspace/config
+
+
+        echo 'Building Right Half...'
+        west build -s zmk/app -d build/right -b nice_nano_v@2.0 -- -DSHIELD=cradio_right -DZMK_CONFIG=/workspace/config
+
+        echo 'Copying firmware to config directory...'
+        cp build/left/zephyr/zmk.uf2 /workspace/config/cradio_left.uf2
+        cp build/right/zephyr/zmk.uf2 /workspace/config/cradio_right.uf2
+
+        echo '✅ Build complete! You can safely close this.'
+      "
+
+volumes:
+  zmk-cache:
+  west-cache:
+  build-cache:
