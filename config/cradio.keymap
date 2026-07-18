@@ -128,10 +128,10 @@
 
         settings_layer {
             bindings = <
-&bootloader  &none  &ext_power EP_TOG  &bt BT_CLR  &bt BT_SEL 0    &bt BT_SEL 3  &none  &unstick  &none  &bootloader
-&none        &none  &none              &none       &bt BT_SEL 1    &bt BT_SEL 4  &none  &none     &none  &none
-&none        &none  &none              &none       &bt BT_SEL 2    &bt BT_SEL 5  &none  &none     &none  &none
-                                       &none       &none           &none         &none
+&bootloader  &none  &ext_power EP_TOG  &bt  BT_CLR    &bt BT_SEL 0    &bt BT_SEL 3  &none  &unstick  &none  &bootloader
+&none        &none  &none              &out OUT_TOG   &bt BT_SEL 1    &bt BT_SEL 4  &none  &none     &none  &none
+&none        &none  &none              &none          &bt BT_SEL 2    &bt BT_SEL 5  &none  &none     &none  &none
+                                       &none          &none           &none         &none
             >;
         };
     };
